@@ -42,6 +42,7 @@ public class BookController {
 
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
     public String deleteStudent(@PathVariable("id") Long bookId, Model model) {
+    	System.out.println("MORO");
         bookRepository.deleteById(bookId);
         return "redirect:../booklist";
     }
